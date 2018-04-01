@@ -1,62 +1,53 @@
 <!DOCTYPE html>
 <html lang="fa">
+        <head>
+          <meta charset="utf-8">
+          <title><-BlogAndPostTitle-></title>
+          <meta name="author" content="<-BlogAuthor->">
+          <meta name="language" content="Farsi">
+          <meta name="description" content="<-BlogAndPostTitle-> - <-BlogDescription-> - <-BlogTitle->">
+          <meta name="keywords" content="<-BlogAndPostTitle->,<-BlogId->">
+          <link rel="alternate" type="application/rss+xml" title="<-BlogTitle->" href="<-BlogXmlLink->" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          
+          <!-- Let styles and  fonts-->
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+         <link href="http://rbootstrap.ir/assets/css/bootstrap-responsive.css" rel="stylesheet">
+         <link href="http://rbootstrap.ir/assets/css/bootstrap.css" rel="stylesheet">
+         <link href='http://www.fontonline.ir/css/BYekan.css' rel='stylesheet' type='text/css'>
 
-<head>
-    <meta charset="utf-8">
-    <title>
-        <-BlogAndPostTitle->
-    </title>
-    <meta name="author" content="<-BlogAuthor->">
-    <meta name="language" content="Farsi">
-    <meta name="description" content="<-BlogAndPostTitle-> - <-BlogDescription-> - <-BlogTitle->">
-    <meta name="keywords" content="<-BlogAndPostTitle->,<-BlogId->">
-    <link rel="alternate" type="application/rss+xml" title="<-BlogTitle->" href="<-BlogXmlLink->" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         
+        
+        
+         <!-- Add scripts-->
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js">
+MathJax.Hub.Config({
+ extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+ jax: ["input/TeX", "output/HTML-CSS"],
+ tex2jax: {
+     inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+     displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+ },
+ "HTML-CSS": { availableFonts: ["TeX"] }
+});
+</script>
 
-    <!-- Let styles and  fonts-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link href="http://rbootstrap.ir/assets/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="http://rbootstrap.ir/assets/css/bootstrap.css" rel="stylesheet">
-    <link href='http://www.fontonline.ir/css/BYekan.css' rel='stylesheet' type='text/css'>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script
 
-    <!-- Add scripts-->
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js">
-        MathJax.Hub.Config({
-            extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
-            jax: ["input/TeX", "output/HTML-CSS"],
-            tex2jax: {
-                inlineMath: [
-                    ['$', '$'],
-                    ["\\(", "\\)"]
-                ],
-                displayMath: [
-                    ['$$', '$$'],
-                    ["\\[", "\\]"]
-                ],
-            },
-            "HTML-CSS": {
-                availableFonts: ["TeX"]
-            }
-        });
-    </script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
-        < /script
-
-        <!-- Fav and touch icons -->
-        < link rel = "icon"
-        href = "<-BlogPhotoLink->"
-        type = "image/gif"
-        sizes = "16x16" >
-
-            < style type = "text/css" >
+         
+         <!-- Fav and touch icons -->
+         <link rel="icon" href="<-BlogPhotoLink->" type="image/gif" sizes="16x16">
+      
+         
+          <style type="text/css">
             body {
-                padding - top: 20 px;
-                padding - bottom: 40 px;
-                font - family: BYekan, 'BYekan', tahoma;
-                font - size: 12 px;
-                color: #000;
+              padding-top: 20px;
+              padding-bottom: 40px;
+              font-family:BYekan,'BYekan',tahoma;
+              font-size:12px;
+              color: #000;
             }
             /* Custom container */
             .container-narrow {
@@ -68,12 +59,12 @@
             .container-narrow > hr {
               margin: 5px 0;
             }
-
+      
 			.TopPost
 			{
 			 font-family:BYekan,'BYekan',tahoma;
 		     color:black;
-
+			
 			}
 			.CenterPost{
 			 line-height: normal;
@@ -89,13 +80,13 @@
 		    {
             float: right !important;
             }
-
+			
 			.NextAndPreviousBlock
 			{            
 			float: right !important;
 
 			}
-
+			
 			/* The Modal (background) */
 			.modal {
 				display: none; /* Hidden by default */
@@ -113,216 +104,210 @@
 		    {
             float: right !important;
             }
-
+			
+			
           </style>
+      
+          
+      <script  language="javascript">
+			  function GetBC(lngPostid)
+		 {
+			 intTimeZone=12600;
+			 strBlogId="<-BlogId->";
+			 intCount=-1;
+			 strResult="";
+			 try {
+			for (i=0;i<BlogComments.length;i+=2)
+			{
+				 if (BlogComments[i]==lngPostid)
+				 intCount=BlogComments[i+1] ;
+			}
+				 }  catch( e) {
+				 }
+		  if ( intCount==-1)  strResult="آرشیو نظرات";
+		  if ( intCount==0)  strResult="نظر بدهید";
+		  if ( intCount>0)  strResult=intCount + " نظر" ;
+		
+		strUrl="/comments/?blogid=" +strBlogId + "&postid=" + lngPostid + "&timezone=" + intTimeZone ;
+		strResult ="<a href=\"javascript:void(0)\" onclick=\"javascript:window.open('" + strUrl + "','blogfa_comments','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=500px')\" >" +  strResult + " </a>" ;
+		document.write ( strResult ) ;
+	   }
+	   function OpenLD()
+	   {
+		window.open('/links','blogfa_ld','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=500px');
+		return true;
+	   }
 
-      <script  language= "javascript" >
-                    function GetBC(lngPostid) {
-                        intTimeZone = 12600;
-                        strBlogId = "<-BlogId->";
-                        intCount = -1;
-                        strResult = "";
-                        try {
-                            for (i = 0; i < BlogComments.length; i += 2) {
-                                if (BlogComments[i] == lngPostid)
-                                    intCount = BlogComments[i + 1];
-                            }
-                        } catch (e) {}
-                        if (intCount == -1) strResult = "آرشیو نظرات";
-                        if (intCount == 0) strResult = "نظر بدهید";
-                        if (intCount > 0) strResult = intCount + " نظر";
+      </script>
 
-                        strUrl = "/comments/?blogid=" + strBlogId + "&postid=" + lngPostid + "&timezone=" + intTimeZone;
-                        strResult = "<a href=\"javascript:void(0)\" onclick=\"javascript:window.open('" + strUrl + "','blogfa_comments','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=500px')\" >" + strResult + " </a>";
-                        document.write(strResult);
-                    }
 
-                function OpenLD() {
-                    window.open('/links', 'blogfa_ld', 'status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=500px');
-                    return true;
-                }
-    </script>
-
-</head>
-
+         
+     </head>
 <body>
-    <embed src="https://mov.tebyan.net/1395/10/gole_narghec_214311.vtb" autostart="true" hidden="false" loop="false" width="1" height="1">
+<embed src="https://mov.tebyan.net/1395/10/gole_narghec_214311.vtb" autostart="true" hidden="false" loop="false" width="1" height="1">
 
-    <div class="container ">
-        <div class="masthead">
-            <!-- Menu blog-->
-            <ul class="nav nav-pills pull-left">
-                <li class="active">
-                    <a href="<-BlogUrl->"> <span class="	glyphicon glyphicon-home">	</span> صفحه اصلی</a>
-                </li>
 
-                <li>
-                    <a href="/posts"> <span class="glyphicon glyphicon-list-alt	"></span> عناوین مطالب</a>
-                </li>
 
-                <li><a href="#aboutModal" data-toggle="modal" data-target="#contactModal"><span class="glyphicon                          glyphicon-envelope	 "> تماس با ما </a></li>
-                <li>
-                    <a href="<-BlogProfileLink->"> <span class="glyphicon glyphicon-user"></span> پروفایل</a>
-                </li>
+<div class="container ">
+      <div class="masthead">
+        <!-- Menu blog-->
+        <ul class="nav nav-pills pull-left">
+         <li class="active"><a href="<-BlogUrl->"> <span class="	glyphicon glyphicon-home">	</span> صفحه اصلی</a></li>
+         
+         <li> <a href="/posts">  <span class="glyphicon glyphicon-list-alt	"></span> عناوین مطالب</a></li>
+         
+         <li><a href="#aboutModal" data-toggle="modal" data-target="#contactModal"><span class="glyphicon                          glyphicon-envelope	 "> تماس با ما </a></li>
+        <li><a href="<-BlogProfileLink->"> <span class="glyphicon glyphicon-user"></span> پروفایل</a></li>
+       
+        <li><a href="<-BlogXmlLink->"><i class="fas fa-rss"></i> خوراک وبلاگ</a></li>
+       </ul>
+        
+        
+        <!--Title blog-->
+        <h5 class="muted"><a href="<-BlogUrl->"><-BlogAndPostTitle-></a></h5>
+        <h6 class="muted"><-BlogDescription-></h6>
+      </div>
 
-                <li><a href="<-BlogXmlLink->"><i class="fas fa-rss"></i> خوراک وبلاگ</a></li>
-            </ul>
+      <hr>
 
-            <!--Title blog-->
-            <h5 class="muted"><a href="<-BlogUrl->"><-BlogAndPostTitle-></a></h5>
-            <h6 class="muted"><-BlogDescription-></h6>
-        </div>
-
-        <hr>
-
-        <div class="row">
-            <div class="col-sm-4">
-
-                <div class="span3 well" style="background:white;">
-                    <center>
-                        <a href="#aboutModal" data-toggle="modal" data-target="#myModal">
+  
+  <div class="row">
+   <div class="col-sm-4">
+ 
+  <div class="span3 well"style="background:white;">
+        <center>
+        <a href="#aboutModal" data-toggle="modal" data-target="#myModal">
         <img src="<-BlogPhotoLink->" name="aboutme" width="140" height="140" class="img-circle"></a>
-                        <h5><-BlogAuthor-></h5>
-                        <em>برای اطلاعات بیشتر بر روی عکس کلید کنید</em>
+        <h5><-BlogAuthor-></h5>
+        <em>برای اطلاعات بیشتر بر روی عکس کلید کنید</em>
+		</center>
+    </div>
+ <BlogPreviousItemsBlock>
+ <div class="span3 well"style="background:white;">
+       
+      <h5>آخرین مطالب</h5>
+      <BlogPreviousItems>
+      <li><a  href="<-PostLink->"><-PostTitle-></a></li>
+      </BlogPreviousItems>
+
+    </div>
+</BlogPreviousItemsBlock>
+
+<div class="span3 well"style="background:white;">
+      <h5>آرشیو مطالب</h5>
+       <BlogArchive>
+      <li><a href="<-ArchiveLink->"><-ArchiveTitle-></a></li>
+      </BlogArchive>
+</div>
+
+<BlogLinksBlock>
+<div class="span3 well"style="background:white;">
+      <h5>پیوندها</h5>
+       <BlogLinks>
+       <li><a href="<-LinkUrl->" target="_blank"><-LinkTitle-></a></li>
+       </BlogLinks>
+</div>
+</BlogLinksBlock>
+
+    
+ <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+                    <!--modal header-->
+                    <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title" id="myModalLabel">درباره <-BlogAuthor-></h4>
+                    </div>
+                    
+           <div class="modal-body">
+                  <center> 
+                  
+                   <BlogPhoto>
+                  <img src="<-BlogPhotoLink->" name="aboutme" width="140" height="140" border="0" class="img-circle">
+                 </BlogPhoto>
+                  
+                     
+                      
+                          <h3 class="media-heading"><-BlogAuthor-></h3>
+                         
+                   </center>
+                   <hr>
+                   <center>
+                   <p class="text-right"><strong>شرح حال</strong><br>
+                   <-BlogAbout->
+
+                   </p>
+                   <br>
+                   </center>
+                </div>
+                <!--modal footer-->
+                <div class="modal-footer">
+                    <center>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
                     </center>
                 </div>
-                <BlogPreviousItemsBlock>
-                    <div class="span3 well" style="background:white;">
-
-                        <h5>آخرین مطالب</h5>
-                        <BlogPreviousItems>
-                            <li>
-                                <a href="<-PostLink->">
-                                    <-PostTitle->
-                                </a>
-                            </li>
-                        </BlogPreviousItems>
-
-                    </div>
-                </BlogPreviousItemsBlock>
-
-                <div class="span3 well" style="background:white;">
-                    <h5>آرشیو مطالب</h5>
-                    <BlogArchive>
-                        <li>
-                            <a href="<-ArchiveLink->">
-                                <-ArchiveTitle->
-                            </a>
-                        </li>
-                    </BlogArchive>
-                </div>
-
-                <BlogLinksBlock>
-                    <div class="span3 well" style="background:white;">
-                        <h5>پیوندها</h5>
-                        <BlogLinks>
-                            <li>
-                                <a href="<-LinkUrl->" target="_blank">
-                                    <-LinkTitle->
-                                </a>
-                            </li>
-                        </BlogLinks>
-                    </div>
-                </BlogLinksBlock>
-
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <!--modal header-->
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                                <h4 class="modal-title" id="myModalLabel">درباره <-BlogAuthor-></h4>
-                            </div>
-
-                            <div class="modal-body">
-                                <center>
-
-                                    <BlogPhoto>
-                                        <img src="<-BlogPhotoLink->" name="aboutme" width="140" height="140" border="0" class="img-circle">
-                                    </BlogPhoto>
-
-                                    <h3 class="media-heading"><-BlogAuthor-></h3>
-
-                                </center>
-                                <hr>
-                                <center>
-                                    <p class="text-right"><strong>شرح حال</strong>
-                                        <br>
-                                        <-BlogAbout->
-
-                                    </p>
-                                    <br>
-                                </center>
-                            </div>
-                            <!--modal footer-->
-                            <div class="modal-footer">
-                                <center>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
-                                </center>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <!--modal header-->
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                                <h4 class="modal-title" id="myModalLabel">تماس با <-BlogAuthor-></h4>
-                            </div>
-
-                            <div class="modal-body">
-
-                                <hr>
-
-                                <form href="mailto:<-BlogEmail->?Subject=description">
-                                    <fieldset>
-                                        <input type="text" id="name" name="name" class="input-block-level" placeholder="نام">
-                                        <input type="text" id="email" name="email" class="input-block-level" placeholder="ایمیل">
-                                        <textarea rows="3" id="description" name="description" class="input-block-level" placeholder="پیام"></textarea>
-                                        <button id="send" type="submit" class="btn btn-success pull-right">ارسال</button>
-                                    </fieldset>
-                                </form>
-
-                            </div>
-                            <!--modal footer-->
-                            <div class="modal-footer">
-                                <center>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
-                                </center>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
+                
             </div>
-            <!--/column-->
-
-            <BLOGFA>
-                <div class="SideBar col-sm-8 well" style="background:white;">
-                    <!-- Header post-->
-                    <div class="well">
-                        <div class="TopPost">
-                            <h5><a style="color:black;"href="<-PostLink->"><span class="glyphicon glyphicon-pencil"></span><-PostTitle-></a></h5 >
+        </div>
+    </div>
+    
+ <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+                    <!--modal header-->
+                    <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title" id="myModalLabel">تماس با <-BlogAuthor-></h4>
+                    </div>
+                    
+           <div class="modal-body">
+                
+                   <hr>
+  
+                <form href="mailto:<-BlogEmail->?Subject=description">
+                    <fieldset>
+                        <input type="text" id="name" name="name" class="input-block-level" placeholder="نام">
+                        <input type="text" id="email" name="email" class="input-block-level" placeholder="ایمیل">
+                        <textarea rows="3" id="description" name="description" class="input-block-level" placeholder=                        "پیام"></textarea>
+                        <button id="send"type="submit" class="btn btn-success pull-right">ارسال</button>
+                    </fieldset>
+                </form>
+	
+                </div>
+                <!--modal footer-->
+                <div class="modal-footer">
+                    <center>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
+                    </center>
+                </div>
+                
+            </div>
+        </div>
+    </div> 
+    
+ </div><!--/column-->
+ 
+  <BLOGFA>
+  <div class="SideBar col-sm-8 well"style="background:white;">
+    <!-- Header post-->
+    <div class="well">
+    <div class="TopPost">
+        <h5><a style="color:black;"href="<-PostLink->"><span class="glyphicon glyphicon-pencil"></span><-PostTitle-></a></h5 >
         </div></div>
-
+    
         <div class=CenterPostBack>
-
+  
         <br><br><-PostContent-> <br><br<br><br><br><br>
-
+    
         <div class=CenterPost>				
         <BlogPostCategoriesBlock><br>موضوعات مرتبط: <BlogPostCategories separator=" ، " ><a href="<-CategoryLink->">            <-CategoryName->   </a></BlogPostCategories></BlogPostCategoriesBlock>
         <BlogPostTagsBlock><br>برچسب‌ها: <BlogPostTags separator=" , "><a href="<-TagLink->"><-TagName-></a></BlogPostTags></              BlogPostTagsBlock>
-
+       
        <br><br><br><br><BlogExtendedPost><b><a href="<-PostLink->"  class="btn btn-success">ادامه مطلب</a></b><br>               </BlogExtendedPost>
-
+    
     </div>
     </div><!--/alert-info-->
-
+    
     <br>
     <br>
 
@@ -332,12 +317,15 @@
     "></span> <-PostAuthor-> |<span class="glyphicon glyphicon-comment	
     "></span> <BlogComment> <script type="text/javascript">GetBC(<-PostId->);</script></span></BlogComment>
     </div>
-
+ 
     <br>
     <br>
    </div><!--/column-->
    </BLOGFA>
 
+
+   
+   
    </div><!--/Row-->
    <br>
    <br>
@@ -360,7 +348,9 @@
     <br>
     <br>
     <br>
+   
 
+ 
  <div class="row container text-center">
     <hr />
   <div class="row ">
@@ -393,16 +383,18 @@
   </div>
   <hr>
     <div class="row">
-
+      
             <ul class="nav">
                 <li ><a href="http://stackprogramer.xyz"style="direction: ltr;"     rel="nofollow" >© 2018 StackDesign</a><a href="http://blog.stackprogramer.xyz"   rel="nofollow" ></a>
              </li>
-
+      
             </ul>
     </div>
 </div>
-
+                      
+     
  </div> <!-- /container -->  
-
+ 
+            
 </body>
 </html>
