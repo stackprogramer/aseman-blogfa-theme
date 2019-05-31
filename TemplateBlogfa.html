@@ -40,7 +40,34 @@ MathJax.Hub.Config({
          <!-- Fav and touch icons -->
          <link rel="icon" href="<-BlogPhotoLink->" type="image/gif" sizes="16x16">
       
-         
+<script type="text/javascript">
+var numberOfSongs =0
+var sound = new Array(numberOfSongs+1)
+sound[0]="https://hw17.cdn.asset.aparat.com/aparat-video/92e563015f50630fc8f315abd432789e13225377-144p__84108.mp4"
+sound[10]= "http://namehnews.ir/content/files/entezari/105225.mp3"
+sound[1]= "https://www.tarafdari.com/sites/default/files/contents/user376430/content-sound/baba_leng_deraz.mp3"
+sound[2]= "https://as8.cdn.asset.aparat.com/aparat-video/9db111ac4e6b4feb250f150cb0b2214d6110292-180p__54144.mp4"
+sound[3]= "http://www.iranve.com/wp-content/uploads/2015/08/Richard-Clayderman-James-Last-Careless-Whisper-iranve.com_.mp3"
+sound[4]= "http://www.coca.ir/wp-content/uploads/2018/01/sinbad-adventures-music-1.mp3"
+sound[6]= "http://www.coca.ir/wp-content/uploads/2018/01/Perrine.mp3"
+sound[7]= "https://as7.cdn.asset.aparat.com/aparat-video/dd9f26b5ab1be282c3d906be3ee2f7571499066__86266.mp4"
+sound[8]= "https://as7.cdn.asset.aparat.com/aparat-video/ec7700c7d9c5a4817896912dbe188b1b10275602-144p__13511.mp4"
+sound[9]= "https://hw17.cdn.asset.aparat.com/aparat-video/2c04e867f163c564f4c3218238a0dc2311545493-144p__35943.mp4"
+
+
+function randomNumber()
+{
+var randomLooper = -1
+while (randomLooper < 0 || randomLooper > numberOfSongs || isNaN(randomLooper)){ randomLooper = parseInt(Math.random()*(numberOfSongs+1))
+}
+return randomLooper
+}
+
+
+var soundFile = sound[randomNumber ()]
+    document.writeln ('<BGSOUND SRC="' + soundFile + '" loop=5>');
+    document.writeln ('<EMBED SRC= "' + soundFile + '" loop=5 PLAYCOUNT=3 hidden=true autostart=true><P>');
+</script>
           <style type="text/css">
             body {
               padding-top: 20px;
@@ -144,8 +171,7 @@ MathJax.Hub.Config({
          
      </head>
 <body>
-<embed src="https://mov.tebyan.net/1395/10/gole_narghec_214311.vtb" autostart="true" hidden="false" loop="false" width="1" height="1">
-
+<embed src="http://namehnews.ir/content/files/entezari/105225.3mp3" autostart="true" hidden="true" loop="true" width="1" height="1">
 
 
 <div class="container ">
@@ -205,7 +231,8 @@ MathJax.Hub.Config({
       <h5>پیوندها</h5>
        <BlogLinks>
        <li><a href="<-LinkUrl->" target="_blank"><-LinkTitle-></a></li>
-       </BlogLinks>
+	  </BlogLinks>
+	  <li><a href="https://blog.stackprogramer.xyz/">دانلود قالب</a></li>
 </div>
 </BlogLinksBlock>
 
@@ -376,7 +403,7 @@ MathJax.Hub.Config({
       </div>
       <div class="col-md-3  footer">
         <ul class="nav nav-pills nav-stacked">
-          <li><a href="https://github.com/stackprogramer/Aseman-Blogfa-Theme">دانلود اخرین نسخه قالب</a></li>
+          <li><a href="/">دانلود اخرین نسخه قالب</a></li>
         </ul>
       </div>  
     </div>
@@ -385,7 +412,7 @@ MathJax.Hub.Config({
     <div class="row">
       
             <ul class="nav">
-                <li ><a href="http://stackprogramer.xyz"style="direction: ltr;"     rel="nofollow" >© 2018 StackDesign</a><a href="http://blog.stackprogramer.xyz"   rel="nofollow" ></a>
+                <li ><a href="http://stackprogramer.xyz"style="direction: ltr;"     rel="nofollow" >© 2018 StackDesign</a>
              </li>
       
             </ul>
@@ -394,7 +421,6 @@ MathJax.Hub.Config({
                       
      
  </div> <!-- /container -->  
- 
-            
+ <script type='text/javascript' src='http://webshomar.com/rx/?counter/stat/8526/d8f983b77bc47e0b22575450dcea6c53/script.js'></script>    
 </body>
 </html>
