@@ -24,7 +24,8 @@ To display mathematical formulas using the LaTeX form, you can display the mathe
 
 
 ## Changelog
-*31-May-2019
+* 22-June-2019
+* 31-May-2019
 * 1-April-2018
 
 
