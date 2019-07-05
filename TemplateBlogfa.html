@@ -14,8 +14,8 @@
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
          <link href="http://rbootstrap.ir/assets/css/bootstrap-responsive.css" rel="stylesheet">
          <link href="http://rbootstrap.ir/assets/css/bootstrap.css" rel="stylesheet">
-         <link href='http://www.fontonline.ir/css/BYekan.css' rel='stylesheet' type='text/css'>
 
+ 
          
         
         
@@ -42,11 +42,22 @@ MathJax.Hub.Config({
       
 
           <style type="text/css">
+		  
+		   @font-face {
+			  font-family: Sahel;
+			  src: url('https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.eot');
+			  src: url('https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.eot?#iefix') format('embedded-opentype'),
+				   url('https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.woff') format('woff'),
+				   url('https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.ttf') format('truetype');
+			  font-weight: normal;
+			}
+
             body {
               padding-top: 20px;
               padding-bottom: 40px;
-              font-family:BYekan,'BYekan',tahoma;
-              font-size:12px;
+              font-family:Sahel,'Sahel',tahoma;
+              font-size:16px;
+			  line-height:1.5;
               color: #000;
             }
             /* Custom container */
@@ -62,18 +73,22 @@ MathJax.Hub.Config({
       
 			.TopPost
 			{
-			 font-family:BYekan,'BYekan',tahoma;
+			 font-family:Sahel,'Sahel',tahoma;
 		     color:black;
+			 border-style: solid;
+             border-color:#F5F5F5;
+			 border-radius:5px;
+			 border-size:1px;
 			
 			}
 			.CenterPost{
-			 line-height: normal;
+			 line-height:1.5;
 			 text-align: justify;
 			 text-justify: inter-word;
 			}
 			.LowPost
 			{
-			 font-family:BYekan,'BYekan',tahoma;
+			 font-family:Sahel,'Sahel',tahoma;
 		     color:black;
 			}
 			.SideBar
@@ -299,10 +314,9 @@ MathJax.Hub.Config({
   <BLOGFA>
   <div class="SideBar col-sm-8 well"style="background:white;">
     <!-- Header post-->
-    <div class="well">
     <div class="TopPost">
-        <h5><a style="color:black;"href="<-PostLink->"><span class="glyphicon glyphicon-pencil"></span><-PostTitle-></a></h5 >
-        </div></div>
+        <h3><a style="color:black;"href="<-PostLink->"><span class="glyphicon glyphicon-pencil"></span><-PostTitle-></a></h3 >
+        </div>
     
         <div class=CenterPostBack>
   
@@ -312,7 +326,7 @@ MathJax.Hub.Config({
         <BlogPostCategoriesBlock><br>موضوعات مرتبط: <BlogPostCategories separator=" ، " ><a href="<-CategoryLink->">            <-CategoryName->   </a></BlogPostCategories></BlogPostCategoriesBlock>
         <BlogPostTagsBlock><br>برچسب‌ها: <BlogPostTags separator=" , "><a href="<-TagLink->"><-TagName-></a></BlogPostTags></              BlogPostTagsBlock>
        
-       <br><br><br><br><BlogExtendedPost><b><a href="<-PostLink->"  class="btn btn-success">ادامه مطلب</a></b><br>               </BlogExtendedPost>
+       <br><br><br><br><BlogExtendedPost><b><a href="<-PostLink->"  class="btn .btn-default">ادامه مطلب</a></b><br>               </BlogExtendedPost>
     
     </div>
     </div><!--/alert-info-->
@@ -342,7 +356,7 @@ MathJax.Hub.Config({
    <br>
 
 <BlogNextAndPreviousBlock>
-<div  class="NextAndPreviousBlock row  col-md-8 alert  alert-info" >
+<div  class="NextAndPreviousBlock row  col-md-8 well" >
     <div style="width:50%">
     <BlogPreviousPageBlock>
     <div style="width:20%;float:right;text-align:right"><a href="<-BlogPreviousPageLink->">مطالب جدیدتر</a></div>
