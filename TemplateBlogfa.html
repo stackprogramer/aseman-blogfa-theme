@@ -64,8 +64,6 @@ MathJax.Hub.Config({
             .container-narrow {
               margin: 0 auto;
               max-width: 950px;
-              background-image: url("https://wallpapertag.com/wallpaper/full/3/5/4/342516-math-background-1920x1080-720p.jpg");
-
             }
             .container-narrow > hr {
               margin: 5px 0;
@@ -110,7 +108,6 @@ MathJax.Hub.Config({
 			
 			.NextAndPreviousBlock
 			{            
-			 float: right !important;
 			 border-style: solid;
              border-color:#F5F5F5;
 			 border-radius:5px;
@@ -133,7 +130,7 @@ MathJax.Hub.Config({
 			}
 			.footer
 		    {
-            float: right !important;
+			text-align:right;
             }
 			
 			
@@ -174,12 +171,9 @@ MathJax.Hub.Config({
 
          
      </head>
-<body>
-<embed src="https://srv-file5.gofile.io/download/DLhfC8/vlc-record-2019-06-16-11h18m35s-AliKoochike-IRMP3IR-.mp3" autostart="true" hidden="true" loop="true" width="1" height="1">
+<body class="container-narrow">
 
-
-<div class="container ">
-      <div class="masthead">
+      <header class="masthead">
         <!-- Menu blog-->
         <ul class="nav nav-pills pull-left">
          <li class="active"><a href="<-BlogUrl->"> <span class="	glyphicon glyphicon-home">	</span> صفحه اصلی</a></li>
@@ -195,139 +189,143 @@ MathJax.Hub.Config({
         <!--Title blog-->
         <h3 class="muted"><a href="<-BlogUrl->"><-BlogAndPostTitle-></a></h3>
         <h6 class="muted"><-BlogDescription-></h6>
-      </div>
+      </header>
 
       <hr>
 
   
   <div class="row">
-   <div class="col-sm-4">
- 
-  <div class="span3 well"style="background:white;">
-        <center>
-        <a href="#aboutModal" data-toggle="modal" data-target="#myModal">
-        <img src="<-BlogPhotoLink->" name="aboutme" width="140" height="140" class="img-circle"></a>
-        <h5><-BlogAuthor-></h5>
-        <em>برای اطلاعات بیشتر بر روی عکس کلید کنید</em>
-		</center>
-    </div>
- <BlogPreviousItemsBlock>
- <div class="span3 well"style="background:white;">
-       
-      <h5>آخرین مطالب</h5>
-      <BlogPreviousItems>
-      <li><a  href="<-PostLink->"><-PostTitle-></a></li>
-      </BlogPreviousItems>
 
-    </div>
-</BlogPreviousItemsBlock>
-
-<div class="span3 well"style="background:white;">
-      <h5>آرشیو مطالب</h5>
-       <BlogArchive>
-      <li><a href="<-ArchiveLink->"><-ArchiveTitle-></a></li>
-      </BlogArchive>
-</div>
-
-<BlogLinksBlock>
-<div class="span3 well"style="background:white;">
-      <h5>پیوندها</h5>
-       <BlogLinks>
-       <li><a href="<-LinkUrl->" target="_blank"><-LinkTitle-></a></li>
-	  </BlogLinks>
-	 
-</div>
-
-<div class="span3 well"style="background:white;">
-      <h5>قالب بلاگفا</h5>
-	   <li><a href="https://blog.stackprogramer.xyz/">وبلاگ استک دیزاین</a></li>
-	   <li><a href="https://github.com/stackprogramer/Aseman-Blogfa-Theme">دانلود قالب</a></li>
-
-</div>
-	  
-	  
-</BlogLinksBlock>
-
-    
- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-    <div class="modal-content">
-                    <!--modal header-->
-                    <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                    <h4 class="modal-title" id="myModalLabel">درباره <-BlogAuthor-></h4>
-                    </div>
-                    
-           <div class="modal-body">
-                  <center> 
-                  
-                   <BlogPhoto>
-                  <img src="<-BlogPhotoLink->" name="aboutme" width="140" height="140" border="0" class="img-circle">
-                 </BlogPhoto>
-                  
-                     
-                      
-                          <h3 class="media-heading"><-BlogAuthor-></h3>
-                         
-                   </center>
-                   <hr>
-                   <center>
-                   <p class="text-right"><strong>شرح حال</strong><br>
-                   <-BlogAbout->
-
-                   </p>
-                   <br>
-                   </center>
-                </div>
-                <!--modal footer-->
-                <div class="modal-footer">
-                    <center>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
-                    </center>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-    
- <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-    <div class="modal-content">
-                    <!--modal header-->
-                    <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                    <h4 class="modal-title" id="myModalLabel">تماس با <-BlogAuthor-></h4>
-                    </div>
-                    
-           <div class="modal-body">
-                
-                   <hr>
   
-                <form href="mailto:<-BlogEmail->?Subject=description">
-                    <fieldset>
-                        <input type="text" id="name" name="name" class="input-block-level" placeholder="نام">
-                        <input type="text" id="email" name="email" class="input-block-level" placeholder="ایمیل">
-                        <textarea rows="3" id="description" name="description" class="input-block-level" placeholder=                        "پیام"></textarea>
-                        <button id="send"type="submit" class="btn btn-success pull-right">ارسال</button>
-                    </fieldset>
-                </form>
-	
-                </div>
-                <!--modal footer-->
-                <div class="modal-footer">
-                    <center>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
-                    </center>
-                </div>
-                
-            </div>
-        </div>
-    </div> 
-    
- </div><!--/column-->
+
+ <aside class="col-4 col-md-4 col-sm-4">
  
-  <BLOGFA>
-  <div class="SideBar col-sm-8 well"style="background:white;">
+			  <div class="span3 well"style="background:white;">
+					<center>
+					<a href="#aboutModal" data-toggle="modal" data-target="#myModal">
+					<img src="<-BlogPhotoLink->" name="aboutme" width="140" height="140" class="img-circle"></a>
+					<h5><-BlogAuthor-></h5>
+					<em>برای اطلاعات بیشتر بر روی عکس کلید کنید</em>
+					</center>
+				</div>
+			 <BlogPreviousItemsBlock>
+			 <div class="span3 well"style="background:white;">
+				   
+				  <h5>آخرین مطالب</h5>
+				  <BlogPreviousItems>
+				  <li><a  href="<-PostLink->"><-PostTitle-></a></li>
+				  </BlogPreviousItems>
+
+				</div>
+			</BlogPreviousItemsBlock>
+
+			<div class="span3 well"style="background:white;">
+				  <h5>آرشیو مطالب</h5>
+				   <BlogArchive>
+				  <li><a href="<-ArchiveLink->"><-ArchiveTitle-></a></li>
+				  </BlogArchive>
+			</div>
+
+			<BlogLinksBlock>
+			<div class="span3 well"style="background:white;">
+				  <h5>پیوندها</h5>
+				   <BlogLinks>
+				   <li><a href="<-LinkUrl->" target="_blank"><-LinkTitle-></a></li>
+				  </BlogLinks>
+				 
+			</div>
+
+			<div class="span3 well"style="background:white;">
+				  <h5>قالب بلاگفا</h5>
+				   <li><a href="https://blog.stackprogramer.xyz/">وبلاگ استک دیزاین</a></li>
+				   <li><a href="https://github.com/stackprogramer/Aseman-Blogfa-Theme">دانلود قالب</a></li>
+
+			</div>
+				  
+				  
+			</BlogLinksBlock>
+
+				
+			 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+				<div class="modal-content">
+								<!--modal header-->
+								<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+								<h4 class="modal-title" id="myModalLabel">درباره <-BlogAuthor-></h4>
+								</div>
+								
+					   <div class="modal-body">
+							  <center> 
+							  
+							   <BlogPhoto>
+							  <img src="<-BlogPhotoLink->" name="aboutme" width="140" height="140" border="0" class="img-circle">
+							 </BlogPhoto>
+							  
+								 
+								  
+									  <h3 class="media-heading"><-BlogAuthor-></h3>
+									 
+							   </center>
+							   <hr>
+							   <center>
+							   <p class="text-right"><strong>شرح حال</strong><br>
+							   <-BlogAbout->
+
+							   </p>
+							   <br>
+							   </center>
+							</div>
+							<!--modal footer-->
+							<div class="modal-footer">
+								<center>
+								<button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
+								</center>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				
+			 <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+				<div class="modal-content">
+								<!--modal header-->
+								<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+								<h4 class="modal-title" id="myModalLabel">تماس با <-BlogAuthor-></h4>
+								</div>
+								
+					   <div class="modal-body">
+							
+							   <hr>
+			  
+							<form href="mailto:<-BlogEmail->?Subject=description">
+								<fieldset>
+									<input type="text" id="name" name="name" class="input-block-level" placeholder="نام">
+									<input type="text" id="email" name="email" class="input-block-level" placeholder="ایمیل">
+									<textarea rows="3" id="description" name="description" class="input-block-level" placeholder=                        "پیام"></textarea>
+									<button id="send"type="submit" class="btn btn-success pull-right">ارسال</button>
+								</fieldset>
+							</form>
+				
+							</div>
+							<!--modal footer-->
+							<div class="modal-footer">
+								<center>
+								<button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
+								</center>
+							</div>
+							
+						</div>
+					</div>
+				</div> 
+    
+ </aside><!--/column-->
+ 
+ 
+ <BLOGFA>
+  <main class="SideBar col-8 col-md-8 col-sm-8  well"style="background:white;">
     <!-- Header post-->
     <div class="TopPost">
         <h3><a style="color:black;"href="<-PostLink->"><span class="glyphicon glyphicon-pencil"></span><-PostTitle-></a></h3 >
@@ -350,11 +348,9 @@ MathJax.Hub.Config({
     "></span> <-PostAuthor-> |<span class="glyphicon glyphicon-comment	
     "></span> <BlogComment> <script type="text/javascript">GetBC(<-PostId->);</script></span></BlogComment>
     </div>
-   </div><!--/column-->
-   </BLOGFA>
+   </main><!--/column-->
+</BLOGFA>
 
-
-   
    
    </div><!--/Row-->
    <br>
@@ -363,55 +359,43 @@ MathJax.Hub.Config({
    <br>
 
 <BlogNextAndPreviousBlock>
-<div  class="NextAndPreviousBlock row  col-md-8 " >
-    <div style="width:50%">
+<div  class="row NextAndPreviousBlock">
+
+
     <BlogPreviousPageBlock>
-    <div style="width:20%;float:right;text-align:right"><a href="<-BlogPreviousPageLink->">مطالب جدیدتر</a></div>
+	<div class="col-6 col-md-6 col-sm-6">
+   <a href="<-BlogPreviousPageLink->">مطالب جدیدتر</a>
+   </div>
     </BlogPreviousPageBlock>
     <BlogNextPageBlock>
-    <div style="width:20%;float:left;text-align:left"><a href="<-BlogNextPageLink->">مطالب قدیمی‌تر</a></div>
+	<div class="col-6 col-md-6 col-sm-6">
+    <a href="<-BlogNextPageLink->">مطالب قدیمی‌تر</a>
+	 </div>
     </BlogNextPageBlock>
-    </div>
 </div>
 </BlogNextAndPreviousBlock>
 
     <br>
     <br>
-    <br>
-   
-
- 
- <div class="row container text-center">
-    <hr />
-  <div class="row ">
-    <div class="col-lg-12  ">
-      <div class="col-md-3 footer">
-        <ul class="nav nav-pills nav-stacked">
-          <li><a href="<-BlogProfileLink->">در باره نویسنده وبلاگ</a></li>
-          <li><a href="#">تماس با نویسنده وبلاگ</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3  footer">
-        <ul class="nav nav-pills nav-stacked">
+	<br>
+<hr>
+  <footer class="row footer">
+       
+      
+        <ul class="nav col-4 col-md-4 col-sm-4">
+          <li><a href="http://www.webgozar.com" rel="nofollow" >شمارش گر وب</a></li>
+        </ul> 
+		  <ul class="nav col-4 col-md-4 col-sm-4 ">
           <li><a href="<-BlogUrl->/posts">عناوین مطالب</a></li>
           <li><a href="<-BlogXmlLink->">لینک آر اس اس وبلاگ</a></li>
         </ul>
-      </div>
-      <div class="col-md-3  footer">
-        <ul class="nav nav-pills nav-stacked">
-          <li><a href="http://www.webgozar.com" rel="nofollow" >شمارش گر وب</a></li>
-        
+		
+		 <ul class="nav col-4 col-md-4 col-sm-4">
+          <li><a href="<-BlogProfileLink->">در باره نویسنده وبلاگ</a></li>
+          <li><a href="#">تماس با نویسنده وبلاگ</a></li>
         </ul>
-      </div>
-       
-    </div>
-  </div>
+  </footer>
   <hr>
-    
-</div>
-                      
-     
- </div> <!-- /container -->  
- <script type='text/javascript' src='http://webshomar.com/rx/?counter/stat/8526/d8f983b77bc47e0b22575450dcea6c53/script.js'></script>    
+                        
 </body>
 </html>
